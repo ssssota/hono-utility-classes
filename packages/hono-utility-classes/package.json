@@ -3,11 +3,25 @@
 	"version": "0.0.1",
 	"description": "Utility classes for Hono",
 	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./dom": {
+			"types": "./dist/dom.d.ts",
+			"default": "./dist/dom.js"
+		}
+	},
 	"scripts": {
 		"build": "tsc",
 		"clean": "node -e \"fs.rmSync('dist',{recursive:true,force:true})\"",
 		"prepare": "pnpm clean && pnpm build"
 	},
+	"files": ["dist"],
 	"keywords": ["hono", "utility", "classes", "css"],
 	"author": "TOMIKAWA Sotaro",
 	"license": "MIT",
