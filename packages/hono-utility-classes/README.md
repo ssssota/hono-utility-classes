@@ -1,6 +1,15 @@
 # hono-utility-classes
 
 ```tsx
+// renderer.ts
+import { Style } from "hono/css";
+import { jsxRenderer } from "hono/jsx-renderer";
+export const renderer = jsxRenderer(({ children }) => (
+  <html>
+    <head><Style /></head>
+    <body>{children}</body>
+  </html>
+));
 // composer.ts
 import { createUtilityClassesComposer, DEFAULT, ARBITRARY } from 'hono-utility-classes'; // or 'hono-utility-classes/dom'
 const c = createUtilityClassesComposer((css) => ({
@@ -15,5 +24,5 @@ const c = createUtilityClassesComposer((css) => ({
 }));
 // Component.tsx
 import { c } from './composer';
-const Component = ({children}) => <div className={c('flex', 'items-center')}>{children}</div>;
+const Component = ({children}) => <div className={c('flex', 'items-center', 'p-4')}>{children}</div>; // <- display:flex; align-items:center; padding:16px;
 ```

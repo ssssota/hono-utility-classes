@@ -31,5 +31,9 @@
 	},
 	"peerDependencies": {
 		"hono": ">=4.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ssssota/hono-utility-classes.git"
 	}
 }
