@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"declaration": true,
+		"isolatedDeclarations": true,
+		"verbatimModuleSyntax": true,
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"target": "esnext"
+	}
+}

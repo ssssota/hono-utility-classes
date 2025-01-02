@@ -1,0 +1,21 @@
+{
+	"name": "hono-utility-classes",
+	"version": "0.0.1",
+	"description": "Utility classes for Hono",
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"clean": "node -e \"fs.rmSync('dist',{recursive:true,force:true})\"",
+		"prepare": "pnpm clean && pnpm build"
+	},
+	"keywords": ["hono", "utility", "classes", "css"],
+	"author": "TOMIKAWA Sotaro",
+	"license": "MIT",
+	"devDependencies": {
+		"hono": "^4.6.15",
+		"typescript": "^5.7.2"
+	},
+	"peerDependencies": {
+		"hono": ">=4.0.0"
+	}
+}
